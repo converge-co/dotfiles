@@ -152,6 +152,12 @@ sudo chflags uchg /Private/var/vm/sleepimage
 # Disable the sudden motion sensor as it’s not useful for SSDs
 sudo pmset -a sms 0
 
+# Tune down the Annoying "Out of Space" Warning Notifications
+# In Sec
+defaults write com.apple.diskspaced warningInterval 3600
+# In GB
+defaults write com.apple.diskspaced freeSpaceWarningLevel 2
+
 ###############################################################################
 # Trackpad, mouse, keyboard, Bluetooth accessories, and input                 #
 ###############################################################################
